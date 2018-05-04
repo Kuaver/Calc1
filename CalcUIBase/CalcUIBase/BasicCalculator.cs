@@ -153,48 +153,39 @@ namespace CalcUIBase
             double.TryParse(operand2, out num2);
             double placeholder = 0.0;
 
+            const int plus= 0, subtract = 1, multiply = 2, divide = 3;
+            int operatorConst = -1;
+            operatorConst = operation == Convert.ToChar("+") ? plus : operation == Convert.ToChar("-") ? subtract : operation == Convert.ToChar("*") ? multiply : divide;
+            
             if (result == placeholder)
             {
-                if (operation == '+')
-                {
-                    result = num1 + num2;
-                    resultBox.Text = result.ToString();
-                    num1Box.Text = num1.ToString();
-                    num2Box.Text = num2.ToString();
-                    operatorBox.Text = operation.ToString();
-                }
-                else if (operation == '-')
-                {
-                    result = num1 - num2;
-                    resultBox.Text = result.ToString();
-                    num1Box.Text = num1.ToString();
-                    num2Box.Text = num2.ToString();
-                    operatorBox.Text = operation.ToString();
-                }
-                else if (operation == '*')
-                {
-                    result = num1 * num2;
-                    resultBox.Text = result.ToString();
-                    num1Box.Text = num1.ToString();
-                    num2Box.Text = num2.ToString();
-                    operatorBox.Text = operation.ToString();
-                }
-                else if (operation == '/')
-                {
-                    if (num2 != 0)
+                switch (operatorConst)
                     {
-                        result = num1 / num2;
-                        resultBox.Text = result.ToString();
-                        num1Box.Text = num1.ToString();
-                        num2Box.Text = num2.ToString();
-                        operatorBox.Text = operation.ToString();
-                    }
-                    else
-                    {
-                        resultBox.Text = "You cannot divide by zero!";
-                    }
-
+                    case plus:
+                        Add newAddition = new Add();
+                        result = newAddition.Addition(num1, num2);
+                        break;
+                    case subtract:
+                        Subtract newSubtraction = new Subtract();
+                        result = newSubtraction.Subtraction(num1, num2);
+                        break;
+                    case multiply:
+                        Multiply newMultiplication = new Multiply();
+                        result = newMultiplication.Multiplication(num1, num2);
+                        break;
+                    case divide:
+                        Divide newDivision = new Divide();
+                        result = newDivision.Division(num1, num2);
+                        if (num2 == 0)
+                        {
+                            resultBox.Text = "You cannot divide by zero!";
+                        }
+                        break;
                 }
+                resultBox.Text = result.ToString();
+                num1Box.Text = num1.ToString();
+                num2Box.Text = num2.ToString();
+                operatorBox.Text = operation.ToString();
             }
             else if (result != placeholder)
             {
