@@ -222,7 +222,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(12, 38);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(99, 20);
+            this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 17;
             // 
             // textBox3
@@ -234,9 +234,9 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 38);
+            this.textBox4.Location = new System.Drawing.Point(162, 38);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(89, 20);
+            this.textBox4.Size = new System.Drawing.Size(44, 20);
             this.textBox4.TabIndex = 19;
             // 
             // button17
