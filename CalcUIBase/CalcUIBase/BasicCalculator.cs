@@ -23,14 +23,14 @@ namespace CalcUIBase
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  //Zero Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "0";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)  //Multiplication Button
         {
             if (input != String.Empty)
             {
@@ -40,7 +40,7 @@ namespace CalcUIBase
             input = string.Empty;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)  //Addition Button
         {
             if (input != String.Empty)
             {
@@ -50,7 +50,7 @@ namespace CalcUIBase
             input = string.Empty;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)  //Subtraction Button
         {
             if (input != String.Empty)
             {
@@ -60,7 +60,7 @@ namespace CalcUIBase
             input = string.Empty;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)  //Division Button
         {
             if (input != String.Empty)
             {
@@ -70,82 +70,82 @@ namespace CalcUIBase
             input = string.Empty;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)  //Clear Button
         {
-            this.textBox1.Text = "";
-            this.textBox2.Text = "";
-            this.textBox3.Text = "";
-            this.textBox4.Text = "";
+            this.resultBox.Text = "";
+            this.num1Box.Text = "";
+            this.num2Box.Text = "";
+            this.operatorBox.Text = "";
             this.input = string.Empty;
             this.operand1 = string.Empty;
             this.operand2 = string.Empty;
             this.result = 0.0;
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)  //One Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "1";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)  //Two Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "2";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)  //Three Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "3";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)  //Four Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "4";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e)  //Five Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "5";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)  //Six Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "6";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button13_Click(object sender, EventArgs e)  //Seven Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "7";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e)  //Eight Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "8";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)  //Nine Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += "9";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button16_Click(object sender, EventArgs e)  //Equals Button
         {
             operand2 = input;
             double num1, num2;
@@ -158,40 +158,40 @@ namespace CalcUIBase
                 if (operation == '+')
                 {
                     result = num1 + num2;
-                    textBox1.Text = result.ToString();
-                    textBox2.Text = num1.ToString();
-                    textBox3.Text = num2.ToString();
-                    textBox4.Text = operation.ToString();
+                    resultBox.Text = result.ToString();
+                    num1Box.Text = num1.ToString();
+                    num2Box.Text = num2.ToString();
+                    operatorBox.Text = operation.ToString();
                 }
                 else if (operation == '-')
                 {
                     result = num1 - num2;
-                    textBox1.Text = result.ToString();
-                    textBox2.Text = num1.ToString();
-                    textBox3.Text = num2.ToString();
-                    textBox4.Text = operation.ToString();
+                    resultBox.Text = result.ToString();
+                    num1Box.Text = num1.ToString();
+                    num2Box.Text = num2.ToString();
+                    operatorBox.Text = operation.ToString();
                 }
                 else if (operation == '*')
                 {
                     result = num1 * num2;
-                    textBox1.Text = result.ToString();
-                    textBox2.Text = num1.ToString();
-                    textBox3.Text = num2.ToString();
-                    textBox4.Text = operation.ToString();
+                    resultBox.Text = result.ToString();
+                    num1Box.Text = num1.ToString();
+                    num2Box.Text = num2.ToString();
+                    operatorBox.Text = operation.ToString();
                 }
                 else if (operation == '/')
                 {
                     if (num2 != 0)
                     {
                         result = num1 / num2;
-                        textBox1.Text = result.ToString();
-                        textBox2.Text = num1.ToString();
-                        textBox3.Text = num2.ToString();
-                        textBox4.Text = operation.ToString();
+                        resultBox.Text = result.ToString();
+                        num1Box.Text = num1.ToString();
+                        num2Box.Text = num2.ToString();
+                        operatorBox.Text = operation.ToString();
                     }
                     else
                     {
-                        textBox1.Text = "You cannot divide by zero!";
+                        resultBox.Text = "You cannot divide by zero!";
                     }
 
                 }
@@ -202,28 +202,28 @@ namespace CalcUIBase
                 {
                     num1 = result;
                     result = num1 + num2;
-                    textBox1.Text = result.ToString();
-                    textBox2.Text = num1.ToString();
-                    textBox3.Text = num2.ToString();
-                    textBox4.Text = operation.ToString();
+                    resultBox.Text = result.ToString();
+                    num1Box.Text = num1.ToString();
+                    num2Box.Text = num2.ToString();
+                    operatorBox.Text = operation.ToString();
                 }
                 else if (operation == '-')
                 {
                     num1 = result;
                     result = num1 - num2;
-                    textBox1.Text = result.ToString();
-                    textBox2.Text = num1.ToString();
-                    textBox3.Text = num2.ToString();
-                    textBox4.Text = operation.ToString();
+                    resultBox.Text = result.ToString();
+                    num1Box.Text = num1.ToString();
+                    num2Box.Text = num2.ToString();
+                    operatorBox.Text = operation.ToString();
                 }
                 else if (operation == '*')
                 {
                     num1 = result;
                     result = num1 * num2;
-                    textBox1.Text = result.ToString();
-                    textBox2.Text = num1.ToString();
-                    textBox3.Text = num2.ToString();
-                    textBox4.Text = operation.ToString();
+                    resultBox.Text = result.ToString();
+                    num1Box.Text = num1.ToString();
+                    num2Box.Text = num2.ToString();
+                    operatorBox.Text = operation.ToString();
                 }
                 else if (operation == '/')
                 {
@@ -231,25 +231,25 @@ namespace CalcUIBase
                     {
                         num1 = result;
                         result = num1 / num2;
-                        textBox1.Text = result.ToString();
-                        textBox2.Text = num1.ToString();
-                        textBox3.Text = num2.ToString();
-                        textBox4.Text = operation.ToString();
+                        resultBox.Text = result.ToString();
+                        num1Box.Text = num1.ToString();
+                        num2Box.Text = num2.ToString();
+                        operatorBox.Text = operation.ToString();
                     }
                     else
                     {
-                        textBox1.Text = "You cannot divide by zero!";
+                        resultBox.Text = "You cannot divide by zero!";
                     }
 
                 }
             }
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button17_Click(object sender, EventArgs e) //Decimal Button
         {
-            this.textBox1.Text = "";
+            this.resultBox.Text = "";
             input += ".";
-            this.textBox1.Text += input;
+            this.resultBox.Text += input;
         }
 
         private void BasicCalculator_Load(object sender, EventArgs e)
