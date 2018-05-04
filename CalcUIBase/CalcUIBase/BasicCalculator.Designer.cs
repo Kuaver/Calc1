@@ -276,7 +276,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "BasicCalculator";
-            this.Text = "qCalc 1.0.3";
+            this.Text = "qCalc 1.0.1";
             this.Load += new System.EventHandler(this.BasicCalculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
