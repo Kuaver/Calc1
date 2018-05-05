@@ -304,7 +304,7 @@
             this.MaximumSize = new System.Drawing.Size(334, 301);
             this.MinimumSize = new System.Drawing.Size(334, 301);
             this.Name = "BasicCalculator";
-            this.Text = "qCalc 1.1.0";
+            this.Text = "qCalc 2.0.0";
             this.Load += new System.EventHandler(this.BasicCalculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
